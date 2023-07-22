@@ -36,6 +36,30 @@ const body = document.querySelector("body");
 
 const headerCart = document.querySelector(".head-rgt");
 
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      568: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+      1248: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+  });
+
+
 /* Eventlisteners related to cart and items adding */
 let nextImg = 0,
     noOfItems = 0,
