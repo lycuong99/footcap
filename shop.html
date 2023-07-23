@@ -1,90 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footcap - Find your footware</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Footcap - Find your footware</title>
-
-  <!-- 
+    <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <!-- 
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- 
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/shop.css" />
+    <!-- 
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet" />
 
-
-  <!-- 
+    <!-- 
     - preload banner
   -->
-  <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+    <link rel="preload" href="./assets/images/hero-banner.png" as="image" />
 
-  <style>
-     .swiper {
-      width: 100%;
-      height: 100%;
-    }
-    .swiper-slide{
-      background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    }
-  </style>
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    </style>
+  </head>
 
-</head>
-
-<body id="top">
-
-  <!-- 
+  <body id="top">
+    <!-- 
     - #HEADER
   -->
 
-  <header class="header" data-header>
-    <div class="container">
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
 
-      <div class="overlay" data-overlay></div>
-
-      <a href="/" class="logo">
-        <img src="./assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
-      </a>
-
-      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-
-      <nav class="navbar" data-navbar>
-
-        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
-
-        <a href="#" class="logo">
-          <img src="./assets/images/logo.svg" width="190" height="50" alt="Footcap logo">
+        <a href="/" class="logo">
+          <img src="./assets/images/logo.svg" width="160" height="50" alt="Footcap logo" />
         </a>
 
-        <ul class="navbar-list">
+        <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
 
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Home</a>
-          </li>
-<!-- 
+        <nav class="navbar" data-navbar>
+          <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="190" height="50" alt="Footcap logo" />
+          </a>
+
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">Home</a>
+            </li>
+            <!-- 
           <li class="navbar-item">
             <a href="#" class="navbar-link">About</a>
           </li>
@@ -93,69 +86,62 @@
             <a href="#" class="navbar-link">Products</a>
           </li> -->
 
-          <li class="navbar-item">
-            <a href="shop.html" class="navbar-link">Shop</a>
-          </li>
+            <li class="navbar-item">
+              <a href="shop.html" class="navbar-link">Shop</a>
+            </li>
 
-          <!-- <li class="navbar-item">
+            <!-- <li class="navbar-item">
             <a href="#" class="navbar-link">Blog</a>
           </li>
 
           <li class="navbar-item">
             <a href="#" class="navbar-link">Contact</a>
           </li> -->
+          </ul>
 
-        </ul>
+          <ul class="nav-action-list">
+            <li>
+              <button class="nav-action-btn">
+                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
 
-        <ul class="nav-action-list">
+                <span class="nav-action-text">Search</span>
+              </button>
+            </li>
 
-          <li>
-            <button class="nav-action-btn">
-              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+            <li>
+              <a href="#" class="nav-action-btn">
+                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
-              <span class="nav-action-text">Search</span>
-            </button>
-          </li>
+                <span class="nav-action-text">Login / Register</span>
+              </a>
+            </li>
 
-          <li>
-            <a href="#" class="nav-action-btn">
-              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            <li>
+              <button class="nav-action-btn">
+                <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
 
-              <span class="nav-action-text">Login / Register</span>
-            </a>
-          </li>
+                <span class="nav-action-text">Wishlist</span>
 
-          <li>
-            <button class="nav-action-btn">
-              <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+              </button>
+            </li>
 
-              <span class="nav-action-text">Wishlist</span>
+            <li>
+              <button class="nav-action-btn">
+                <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
 
-              <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
-            </button>
-          </li>
+                <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
 
-          <li>
-            <button class="nav-action-btn">
-              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+                <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-              <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
-
-              <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
-            </button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-    </div>
-  </header>
-
-
-
-  <main class="search-page-wrapper">
-    <section class="session search-section">
+    <main class="search-page-wrapper container">
+      <section class="session search-section">
         <div class="container">
           <div class="input-control">
             <span class="icon dl-inline-flex flex-center gap-1">
@@ -167,13 +153,111 @@
       </section>
 
       <section class="filter-wrapper">
-        <h4 class="dl-flex align-center">
+        <h4 class="dl-flex align-center filter-header">
           <span>Filter</span>
-           <span class="icon dl-inline-flex flex-center gap-1">
-          <ion-icon name="chevron-down-outline"></ion-icon>
-        </span>
+          <span class="icon dl-inline-flex flex-center gap-1">
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </span>
         </h4>
-       
+       <div class="filter-groups">
+         <div class="filter-group" id="priceFilter">
+          <h5 class="filter-title">Price</h5>
+          <div class="range">
+            <div class="range-slider">
+              <span class="range-selected"></span>
+            </div>
+            <div class="range-input">
+              <input type="range" class="min" min="0" max="1000" value="300" step="10" style="text-align: right;" />
+              <input type="range" class="max" min="0" max="1000" value="700" step="10" />
+            </div>
+            <div class="range-price">
+              <input type="text" name="min" value="300" />
+              <span><ion-icon name="remove-outline"></ion-icon></span>
+              <input type="text" name="max" value="700" />
+            </div>
+          </div>
+        </div>
+        <div class="filter-group" id="brandFilter">
+          <h5 class="filter-title">Brand</h5>
+          <ul class="filter-checkboxs">
+            <li class="filter-checkbox">
+              <label class="checkbox-container"
+                ><span class="checkbox-label">Nike</span>
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+            <li class="filter-checkbox">
+              <label class="checkbox-container"
+                ><span class="checkbox-label">Adidas</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+            <li class="filter-checkbox">
+              <label class="checkbox-container"
+                ><span class="checkbox-label">Puma</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+            <li class="filter-checkbox">
+              <label class="checkbox-container"
+                ><span class="checkbox-label">Vans</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="filter-group" id="sizeFilter">
+          <h5 class="filter-title">Size</h5>
+           <ul class="filter-checkboxs">
+            <li class="filter-checkbox">
+              <label class="checkbox-container"
+                ><span class="checkbox-label">36</span>
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+            <li class="filter-checkbox">
+              <label class="checkbox-container"
+                ><span class="checkbox-label">37</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+            <li class="filter-checkbox">
+              <label class="checkbox-container"
+                ><span class="checkbox-label">38</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+            <li class="filter-checkbox">
+              <label class="checkbox-container"
+                ><span class="checkbox-label">39</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+             <li class="filter-checkbox">
+              <label class="checkbox-container"
+                ><span class="checkbox-label">40</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+             <li class="filter-checkbox">
+              <label class="checkbox-container"
+                ><span class="checkbox-label">41</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+       </div>
       </section>
 
       <!-- 
@@ -181,51 +265,26 @@
       -->
 
       <section class="section product">
-        <div class="container">
+        <div class="">
+          <span class="product-total">06 results</span>
 
-          <h2 class="h2 section-title">Bestsellers Products</h2>
-
-          <ul class="filter-list">
-
-            <li>
-              <button class="filter-btn  active">All</button>
-            </li>
-
-            <li>
-              <button class="filter-btn">Nike</button>
-            </li>
-
-            <li>
-              <button class="filter-btn">Adidas</button>
-            </li>
-
-            <li>
-              <button class="filter-btn">Puma</button>
-            </li>
-
-            <li>
-              <button class="filter-btn">Bata</button>
-            </li>
-
-            <li>
-              <button class="filter-btn">Apex</button>
-            </li>
-
-          </ul>
+         
 
           <ul class="product-list">
-
             <li class="product-item">
               <div class="product-card" tabindex="0">
-
                 <figure class="card-banner">
-                  <img src="./assets/images/product-1.jpg" width="312" height="350" loading="lazy"
-                    alt="Running Sneaker Shoes" class="image-contain">
+                  <img
+                    src="./assets/images/product-1.jpg"
+                    width="312"
+                    height="350"
+                    loading="lazy"
+                    alt="Running Sneaker Shoes"
+                    class="image-contain" />
 
                   <div class="card-badge">New</div>
 
                   <ul class="card-action-list">
-
                     <li class="card-action-item">
                       <button class="card-action-btn" aria-labelledby="card-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
@@ -257,12 +316,10 @@
 
                       <div class="card-action-tooltip" id="card-label-4">Compare</div>
                     </li>
-
                   </ul>
                 </figure>
 
                 <div class="card-content">
-
                   <div class="card-cat">
                     <a href="#" class="card-cat-link">Men</a> /
                     <a href="#" class="card-cat-link">Women</a>
@@ -273,21 +330,22 @@
                   </h3>
 
                   <data class="card-price" value="180.85">$180.85</data>
-
                 </div>
-
               </div>
             </li>
 
             <li class="product-item">
               <div class="product-card" tabindex="0">
-
                 <figure class="card-banner">
-                  <img src="./assets/images/product-2.jpg" width="312" height="350" loading="lazy"
-                    alt="Leather Mens Slipper" class="image-contain">
+                  <img
+                    src="./assets/images/product-2.jpg"
+                    width="312"
+                    height="350"
+                    loading="lazy"
+                    alt="Leather Mens Slipper"
+                    class="image-contain" />
 
                   <ul class="card-action-list">
-
                     <li class="card-action-item">
                       <button class="card-action-btn" aria-labelledby="card-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
@@ -319,12 +377,10 @@
 
                       <div class="card-action-tooltip" id="card-label-4">Compare</div>
                     </li>
-
                   </ul>
                 </figure>
 
                 <div class="card-content">
-
                   <div class="card-cat">
                     <a href="#" class="card-cat-link">Men</a> /
                     <a href="#" class="card-cat-link">Sports</a>
@@ -335,23 +391,24 @@
                   </h3>
 
                   <data class="card-price" value="190.85">$190.85</data>
-
                 </div>
-
               </div>
             </li>
 
             <li class="product-item">
               <div class="product-card" tabindex="0">
-
                 <figure class="card-banner">
-                  <img src="./assets/images/product-3.jpg" width="312" height="350" loading="lazy"
-                    alt="Simple Fabric Shoe" class="image-contain">
+                  <img
+                    src="./assets/images/product-3.jpg"
+                    width="312"
+                    height="350"
+                    loading="lazy"
+                    alt="Simple Fabric Shoe"
+                    class="image-contain" />
 
                   <div class="card-badge">New</div>
 
                   <ul class="card-action-list">
-
                     <li class="card-action-item">
                       <button class="card-action-btn" aria-labelledby="card-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
@@ -383,12 +440,10 @@
 
                       <div class="card-action-tooltip" id="card-label-4">Compare</div>
                     </li>
-
                   </ul>
                 </figure>
 
                 <div class="card-content">
-
                   <div class="card-cat">
                     <a href="#" class="card-cat-link">Men</a> /
                     <a href="#" class="card-cat-link">Women</a>
@@ -399,23 +454,24 @@
                   </h3>
 
                   <data class="card-price" value="160.85">$160.85</data>
-
                 </div>
-
               </div>
             </li>
 
             <li class="product-item">
               <div class="product-card" tabindex="0">
-
                 <figure class="card-banner">
-                  <img src="./assets/images/product-4.jpg" width="312" height="350" loading="lazy"
-                    alt="Air Jordan 7 Retro " class="image-contain">
+                  <img
+                    src="./assets/images/product-4.jpg"
+                    width="312"
+                    height="350"
+                    loading="lazy"
+                    alt="Air Jordan 7 Retro "
+                    class="image-contain" />
 
                   <div class="card-badge"> -25%</div>
 
                   <ul class="card-action-list">
-
                     <li class="card-action-item">
                       <button class="card-action-btn" aria-labelledby="card-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
@@ -447,12 +503,10 @@
 
                       <div class="card-action-tooltip" id="card-label-4">Compare</div>
                     </li>
-
                   </ul>
                 </figure>
 
                 <div class="card-content">
-
                   <div class="card-cat">
                     <a href="#" class="card-cat-link">Men</a> /
                     <a href="#" class="card-cat-link">Sports</a>
@@ -463,23 +517,24 @@
                   </h3>
 
                   <data class="card-price" value="170.85">$170.85 <del>$200.21</del></data>
-
                 </div>
-
               </div>
             </li>
 
             <li class="product-item">
               <div class="product-card" tabindex="0">
-
                 <figure class="card-banner">
-                  <img src="./assets/images/product-5.jpg" width="312" height="350" loading="lazy"
-                    alt="Nike Air Max 270 SE" class="image-contain">
+                  <img
+                    src="./assets/images/product-5.jpg"
+                    width="312"
+                    height="350"
+                    loading="lazy"
+                    alt="Nike Air Max 270 SE"
+                    class="image-contain" />
 
                   <div class="card-badge">New</div>
 
                   <ul class="card-action-list">
-
                     <li class="card-action-item">
                       <button class="card-action-btn" aria-labelledby="card-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
@@ -511,12 +566,10 @@
 
                       <div class="card-action-tooltip" id="card-label-4">Compare</div>
                     </li>
-
                   </ul>
                 </figure>
 
                 <div class="card-content">
-
                   <div class="card-cat">
                     <a href="#" class="card-cat-link">Men</a> /
                     <a href="#" class="card-cat-link">Women</a>
@@ -527,21 +580,22 @@
                   </h3>
 
                   <data class="card-price" value="120.85">$120.85</data>
-
                 </div>
-
               </div>
             </li>
 
             <li class="product-item">
               <div class="product-card" tabindex="0">
-
                 <figure class="card-banner">
-                  <img src="./assets/images/product-6.jpg" width="312" height="350" loading="lazy"
-                    alt="Adidas Sneakers Shoes" class="image-contain">
+                  <img
+                    src="./assets/images/product-6.jpg"
+                    width="312"
+                    height="350"
+                    loading="lazy"
+                    alt="Adidas Sneakers Shoes"
+                    class="image-contain" />
 
                   <ul class="card-action-list">
-
                     <li class="card-action-item">
                       <button class="card-action-btn" aria-labelledby="card-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
@@ -573,12 +627,10 @@
 
                       <div class="card-action-tooltip" id="card-label-4">Compare</div>
                     </li>
-
                   </ul>
                 </figure>
 
                 <div class="card-content">
-
                   <div class="card-cat">
                     <a href="#" class="card-cat-link">Men</a> /
                     <a href="#" class="card-cat-link">Women</a>
@@ -589,21 +641,22 @@
                   </h3>
 
                   <data class="card-price" value="100.85">$100.85</data>
-
                 </div>
-
               </div>
             </li>
 
             <li class="product-item">
               <div class="product-card" tabindex="0">
-
                 <figure class="card-banner">
-                  <img src="./assets/images/product-7.jpg" width="312" height="350" loading="lazy"
-                    alt="Nike Basketball shoes" class="image-contain">
+                  <img
+                    src="./assets/images/product-7.jpg"
+                    width="312"
+                    height="350"
+                    loading="lazy"
+                    alt="Nike Basketball shoes"
+                    class="image-contain" />
 
                   <ul class="card-action-list">
-
                     <li class="card-action-item">
                       <button class="card-action-btn" aria-labelledby="card-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
@@ -635,12 +688,10 @@
 
                       <div class="card-action-tooltip" id="card-label-4">Compare</div>
                     </li>
-
                   </ul>
                 </figure>
 
                 <div class="card-content">
-
                   <div class="card-cat">
                     <a href="#" class="card-cat-link">Men</a> /
                     <a href="#" class="card-cat-link">Sports</a>
@@ -651,21 +702,22 @@
                   </h3>
 
                   <data class="card-price" value="120.85">$120.85</data>
-
                 </div>
-
               </div>
             </li>
 
             <li class="product-item">
               <div class="product-card" tabindex="0">
-
                 <figure class="card-banner">
-                  <img src="./assets/images/product-8.jpg" width="312" height="350" loading="lazy"
-                    alt="Simple Fabric Shoe" class="image-contain">
+                  <img
+                    src="./assets/images/product-8.jpg"
+                    width="312"
+                    height="350"
+                    loading="lazy"
+                    alt="Simple Fabric Shoe"
+                    class="image-contain" />
 
                   <ul class="card-action-list">
-
                     <li class="card-action-item">
                       <button class="card-action-btn" aria-labelledby="card-label-1">
                         <ion-icon name="cart-outline"></ion-icon>
@@ -697,12 +749,10 @@
 
                       <div class="card-action-tooltip" id="card-label-4">Compare</div>
                     </li>
-
                   </ul>
                 </figure>
 
                 <div class="card-content">
-
                   <div class="card-cat">
                     <a href="#" class="card-cat-link">Men</a> /
                     <a href="#" class="card-cat-link">Women</a>
@@ -713,254 +763,212 @@
                   </h3>
 
                   <data class="card-price" value="100.85">$100.85</data>
-
                 </div>
-
               </div>
             </li>
-
           </ul>
-
+          <div class="flex-center dl-flex">
+             <button class="filter-btn">View more</button>
+          </div>
         </div>
       </section>
-  </main>
+    </main>
 
-
-
-
-
-  <!-- 
+    <!-- 
     - #FOOTER
   -->
 
-  <footer class="footer">
+    <footer class="footer">
+      <div class="footer-top section">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img src="./assets/images/logo.svg" width="160" height="50" alt="Footcap logo" />
+            </a>
 
-    <div class="footer-top section">
-      <div class="container">
+            <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
 
-        <div class="footer-brand">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
 
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
-          </a>
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
 
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-        <div class="footer-link-box">
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">Contact Us</p>
-            </li>
-
-            <li>
-              <address class="footer-link">
-                <ion-icon name="location"></ion-icon>
-
-                <span class="footer-link-text">
-                  2751 S Parker Rd, Aurora, CO 80014, United States
-                </span>
-              </address>
-            </li>
-
-            <li>
-              <a href="tel:+557343673257" class="footer-link">
-                <ion-icon name="call"></ion-icon>
-
-                <span class="footer-link-text">+557343673257</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="mailto:footcap@help.com" class="footer-link">
-                <ion-icon name="mail"></ion-icon>
-
-                <span class="footer-link-text">footcap@help.com</span>
-              </a>
-            </li>
-
-          </ul>
-
-          <ul class="footer-list">
-
-            <li>
-              <p class="footer-list-title">My Account</p>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">My Account</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">View Cart</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">Wishlist</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">Compare</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-
-                <span class="footer-link-text">New Products</span>
-              </a>
-            </li>
-
-          </ul>
-
-          <div class="footer-list">
-
-            <p class="footer-list-title">Opening Time</p>
-
-            <table class="footer-table">
-              <tbody>
-
-                <tr class="table-row">
-                  <th class="table-head" scope="row">Mon - Tue:</th>
-
-                  <td class="table-data">8AM - 10PM</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head" scope="row">Wed:</th>
-
-                  <td class="table-data">8AM - 7PM</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head" scope="row">Fri:</th>
-
-                  <td class="table-data">7AM - 12PM</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head" scope="row">Sat:</th>
-
-                  <td class="table-data">9AM - 8PM</td>
-                </tr>
-
-                <tr class="table-row">
-                  <th class="table-head" scope="row">Sun:</th>
-
-                  <td class="table-data">Closed</td>
-                </tr>
-
-              </tbody>
-            </table>
-
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <div class="footer-list">
+          <div class="footer-link-box">
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Contact Us</p>
+              </li>
 
-            <p class="footer-list-title">Newsletter</p>
+              <li>
+                <address class="footer-link">
+                  <ion-icon name="location"></ion-icon>
 
-            <p class="newsletter-text">
-              Authoritatively morph 24/7 potentialities with error-free partnerships.
-            </p>
+                  <span class="footer-link-text"> 2751 S Parker Rd, Aurora, CO 80014, United States </span>
+                </address>
+              </li>
 
-            <form action="" class="newsletter-form">
-              <input type="email" name="email" required placeholder="Email Address" class="newsletter-input">
+              <li>
+                <a href="tel:+557343673257" class="footer-link">
+                  <ion-icon name="call"></ion-icon>
 
-              <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
+                  <span class="footer-link-text">+557343673257</span>
+                </a>
+              </li>
 
+              <li>
+                <a href="mailto:footcap@help.com" class="footer-link">
+                  <ion-icon name="mail"></ion-icon>
+
+                  <span class="footer-link-text">footcap@help.com</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">My Account</p>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                  <span class="footer-link-text">My Account</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                  <span class="footer-link-text">View Cart</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                  <span class="footer-link-text">Wishlist</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                  <span class="footer-link-text">Compare</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                  <span class="footer-link-text">New Products</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="footer-list">
+              <p class="footer-list-title">Opening Time</p>
+
+              <table class="footer-table">
+                <tbody>
+                  <tr class="table-row">
+                    <th class="table-head" scope="row">Mon - Tue:</th>
+
+                    <td class="table-data">8AM - 10PM</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head" scope="row">Wed:</th>
+
+                    <td class="table-data">8AM - 7PM</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head" scope="row">Fri:</th>
+
+                    <td class="table-data">7AM - 12PM</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head" scope="row">Sat:</th>
+
+                    <td class="table-data">9AM - 8PM</td>
+                  </tr>
+
+                  <tr class="table-row">
+                    <th class="table-head" scope="row">Sun:</th>
+
+                    <td class="table-data">Closed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="footer-list">
+              <p class="footer-list-title">Newsletter</p>
+
+              <p class="newsletter-text"> Authoritatively morph 24/7 potentialities with error-free partnerships. </p>
+
+              <form action="" class="newsletter-form">
+                <input type="email" name="email" required placeholder="Email Address" class="newsletter-input" />
+
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </form>
+            </div>
           </div>
-
         </div>
-
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <div class="container">
-
-        <p class="copyright">
-          &copy; 2022 <a href="#" class="copyright-link">footcap</a>. All Rights Reserved
-        </p>
-
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright"> &copy; 2022 <a href="#" class="copyright-link">footcap</a>. All Rights Reserved </p>
+        </div>
       </div>
-    </div>
+    </footer>
 
-  </footer>
-
-
-
-
-
-  <!-- 
+    <!-- 
     - #GO TO TOP
   -->
 
-  <a href="#top" class="go-top-btn" data-go-top>
-    <ion-icon name="arrow-up-outline"></ion-icon>
-  </a>
+    <a href="#top" class="go-top-btn" data-go-top>
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-
-
-  <!-- 
+    <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
-
-  <!-- 
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/shop.js"></script>
+    <!-- 
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-</body>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>
