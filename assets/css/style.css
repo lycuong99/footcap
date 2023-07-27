@@ -184,7 +184,9 @@ body {
   font-size: var(--fs-5);
   text-transform: uppercase;
 }
-
+a.btn{
+  display: flex;
+}
 .btn {
   background: var(--background, var(--bittersweet));
   color: var(--color, var(--white));
