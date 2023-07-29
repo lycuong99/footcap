@@ -37,3 +37,30 @@ rangePrice.forEach((input) => {
     }
   });
 });
+
+let toggleBtn = document.querySelector(".js-toggle-accordion");
+let filterWrapper = document.querySelector(".filter-wrapper");
+toggleBtn.addEventListener("click", () => {
+  let $contentWrapper = filterWrapper.querySelector(".filter-groups-wrapper");
+  let $content = $contentWrapper.querySelector(".filter-groups");
+
+  if (!filterWrapper.classList.contains("expanded")) {
+     $contentWrapper.style.height = `${$content.clientHeight}px`;
+
+     let transitionDuration = getComputedStyle($contentWrapper).getPropertyValue("transition-duration");
+
+     transitionDuration = parseFloat(transitionDuration);
+
+     setTimeout(() => {
+       $contentWrapper.style.height = "auto";
+     }, transitionDuration * 1000);
+  }else{
+     $contentWrapper.style.height = `${$content.clientHeight}px`;
+
+     setTimeout(() => {
+       $contentWrapper.style.height = `${0}px`;
+     }, 100);
+  }
+
+   filterWrapper.classList.toggle("expanded");
+});

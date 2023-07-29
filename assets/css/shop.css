@@ -18,11 +18,23 @@
 .filter-wrapper{
   display: flex;
   flex-direction: column;
-  gap: 2.75rem;
   max-width: 500px;
+  transition: all 0.3s ease-in-out;
+}
+.filter-groups-wrapper{
+  transition: all 0.3s ease-in-out;
+
+  overflow: hidden;
 
 }
+.filter-wrapper.expanded .filter-groups-wrapper{
+  opacity: 1;
+}
+.filter-wrapper:not(.expanded) .filter-groups-wrapper{
+    opacity: 0.6;
+}
 .filter-groups{
+  padding-top: 2.75rem;
   grid-area: filter;
   display: grid;
   gap: 2.5rem;
